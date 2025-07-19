@@ -16,6 +16,10 @@ export default function Home() {
       <Link href="/posts/2" className="text-blue-500 hover:underline ml-4">
         View Post 2
       </Link>
+      {/* API key using .env.local */}
+      <p className="mt-4 ">
+        API URL: {process.env.NEXT_PUBLIC_API_URL}
+      </p>
     </Layout>
   );
 }
