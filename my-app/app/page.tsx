@@ -3,8 +3,7 @@ import Layout from "./navigation";
 
 export default function Home() {
   return (
-    <main>
-
+    <Layout>
       <h1 className="text-3xl font-bold underline">
         Welcome to our HomePage!
       </h1>
@@ -17,6 +16,6 @@ export default function Home() {
       <Link href="/posts/2" className="text-blue-500 hover:underline ml-4">
         View Post 2
       </Link>
-    </main>
+    </Layout>
   );
 }
