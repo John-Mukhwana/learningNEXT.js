@@ -1,6 +1,7 @@
 
 
 import {posts} from "@/app/data/posts";
+import styles from "./Post.module.css";
 
 interface PostPageProps {
   params: { id: string };
@@ -32,11 +33,11 @@ export default function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <main>
-      <h1 className="text-3xl font-bold underline">
+    <main className={styles.container}>
+      <h1 className={styles.title}>
         {post.title}
       </h1>
-      <p className="mt-4">
+      <p className={styles.content} >
         {post.content}
       </p>
     </main>
