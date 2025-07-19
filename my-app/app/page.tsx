@@ -1,9 +1,10 @@
 import Link from "next/link";
-
+import Layout from "./navigation";
 
 export default function Home() {
   return (
     <main>
+
       <h1 className="text-3xl font-bold underline">
         Welcome to our HomePage!
       </h1>
