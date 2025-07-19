@@ -2,14 +2,14 @@
 
 import {posts} from "@/app/data/posts";
 import styles from "./Post.module.css";
-
+import Layout from "@/app/navigation";
 interface PostPageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
   
 }
 
-export default function PostPage({ params }: PostPageProps) {
-  const { id } = params;  
+export default async function PostPage({ params }: PostPageProps) {
+  const { id } = await params;  
 
   interface Post {
     id: string;
@@ -33,6 +33,7 @@ export default function PostPage({ params }: PostPageProps) {
   }
 
   return (
+    <Layout>
     <main className={styles.container}>
       <h1 className={styles.title}>
         {post.title}
@@ -41,6 +42,7 @@ export default function PostPage({ params }: PostPageProps) {
         {post.content}
       </p>
     </main>
+    </Layout>
   );
 }
 
